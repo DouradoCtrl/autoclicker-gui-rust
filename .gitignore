@@ -1,0 +1,12 @@
+# Cargo build artifacts
+/target
+
+# IDE & Tooling
+.agent/
+openspec/
+.vscode/
+.idea/
+
+# Legacy / Non-rust files
+*.py
+test_*
