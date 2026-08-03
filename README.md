@@ -1,4 +1,4 @@
-# AutoClicker Humanizado GUI
+# AutoClicker Humanizado GUI 🦀
 
 ![Rust](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white)
 
@@ -74,17 +74,40 @@ A aplicação segue uma separação clara entre a camada de apresentação (Inte
 
 ---
 
-## Pré-requisitos
+## 🛠️ Tutorial de Instalação do Rust
 
-Para compilar e executar o projeto no Linux, são necessárias as seguintes dependências no sistema:
+Se você ainda não possui o Rust instalado em seu sistema Linux, siga o passo a passo abaixo utilizando o utilitário oficial `rustup`:
 
-### 1. Ferramentas do Rust
-Instale o toolchain do Rust:
+### Passo 1: Executar o instalador oficial do Rust
+Abra o seu terminal e rode o seguinte comando:
 ```bash
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
-### 2. Bibliotecas de Sistema (GTK4 e Libadwaita)
+### Passo 2: Confirmar a instalação
+Durante a execução do script, o terminal exibirá opções de instalação. Pressione a tecla **Enter** para aceitar a instalação padrão (*Option 1: Proceed with installation (default)*).
+
+### Passo 3: Carregar as variáveis de ambiente
+Após a conclusão da instalação, carregue o ambiente do Cargo no seu terminal atual:
+```bash
+source "$HOME/.cargo/env"
+```
+
+### Passo 4: Confirmar a instalação
+Para verificar se o compilador do Rust e o gerenciador de pacotes Cargo foram instalados corretamente, execute:
+```bash
+rustc --version
+cargo --version
+```
+Se ambos exibirem os números de versão (ex: `rustc 1.80.0 ...`), o Rust está pronto para uso!
+
+---
+
+## 📋 Dependências do Sistema
+
+Além do Rust, você precisará das bibliotecas de desenvolvimento gráfico do GTK4/Libadwaita e permissões de entrada:
+
+### 1. Bibliotecas de Sistema (GTK4 e Libadwaita)
 
 Ubuntu / Debian:
 ```bash
@@ -102,8 +125,8 @@ Arch Linux:
 sudo pacman -S gtk4 libadwaita
 ```
 
-### 3. Permissões de Dispositivo de Entrada (evdev)
-O programa lê e envia eventos nativos através de /dev/input/*. Adicione seu usuário ao grupo `input` para permitir acesso sem privilégios de root:
+### 2. Permissões de Dispositivo de Entrada (evdev)
+O programa lê e envia eventos nativos através de `/dev/input/*`. Adicione seu usuário ao grupo `input` para permitir acesso sem privilégios de root:
 
 ```bash
 sudo usermod -aG input $USER
@@ -112,7 +135,7 @@ Nota: É necessário encerrar a sessão (logoff) ou reiniciar o sistema para que
 
 ---
 
-## Como Executar
+## 🚀 Como Executar
 
 1. Clone o repositório:
 ```bash
